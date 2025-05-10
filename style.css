@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.header_section{
+    background-color:lightblue;
+    color: white;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button_section > button{
+    color:black;
+    background-color: blanchedalmond;
+    padding: 10px 20px;
+    margin: 30px;
+}
+
+.game_section{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
