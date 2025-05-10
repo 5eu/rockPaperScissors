@@ -35,21 +35,37 @@ function playRound(userChoice,computerChose){
     roundOutcomeHTML+=`Round${round}: You chose ${userChoice}, and the computer chose ${computerChose}.`;    
     if (userChoice === computerChose){
            
-        roundOutcomeHTML+= `<p>It is a tie!</p>`;
+        roundOutcomeHTML+= ` It is a tie!`;
         }
         else if((userChoice == "rock" && computerChose =="scissors")||
                 (userChoice =="scissors" && computerChose == "paper")||
                 (userChoice == "paper" && computerChose == "rock"))
             {
                 humanScore +=1;
-                roundOutcomeHTML += `<p>You win!</p>`;
+                roundOutcomeHTML += ` You win!`;
             }
         else{
             computerScore +=1;
-            roundOutcomeHTML += `<p>The computer win!</p>`;
+            roundOutcomeHTML += ` The computer win!`;
         }
     roundOutcomeHTML += `<p>Your score is ${humanScore} and the computer\'s score is ${computerScore}.</p><br>` ;
     resultDiv.innerHTML += roundOutcomeHTML;
+    if (humanScore ==5){
+        alert("You win the game");
+        humanScore = 0;
+        computerScore = 0;
+        resultDiv.innerHTML = "";
+        round =0;
+    }
+    else if(computerScore ==5){
+        alert("Computer win the game");
+        humanScore = 0;
+        computerScore = 0;
+        resultDiv.innerHTML = "";
+        round =0;
+    }
+
+
 }
 
 
